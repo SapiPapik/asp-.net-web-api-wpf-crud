@@ -1,0 +1,33 @@
+﻿<Window x:Class="ProductCatalog.WPF.EquipmentForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductCatalog.WPF"
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:models="clr-namespace:ProductCatalog.WPF.Models"
+        mc:Ignorable="d"
+        Title="EquipmentForm" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="ConfirmButton" Content="Создать&#xD;&#xA;" HorizontalAlignment="Left" Margin="38,275,0,0" VerticalAlignment="Top" Width="89" Height="20"/>
+        <Button x:Name="CancelButton" Content="Отмена&#xD;&#xA;" HorizontalAlignment="Left" Margin="189,275,0,0" VerticalAlignment="Top" Width="89" Height="20"/>
+        <TextBox x:Name="EquipmentSpecification" HorizontalAlignment="Left" Height="79" Margin="158,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="EquipmentPrice" HorizontalAlignment="Left" Height="23" Margin="158,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.528,-2.449"/>
+        <ComboBox x:Name="EquipmentBrandId" HorizontalAlignment="Left" Margin="158,199,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="EquipmentToolTypeId"  HorizontalAlignment="Left" Margin="158,237,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Характеристики:" HorizontalAlignment="Left" Margin="38,66,0,0" VerticalAlignment="Top"/>
+        <Label Content="Стоимость:" HorizontalAlignment="Left" Margin="38,158,0,0" VerticalAlignment="Top"/>
+        <Label Content="Брэнд:" HorizontalAlignment="Left" Margin="38,195,0,0" VerticalAlignment="Top"/>
+        <Label Content="Оборудование:" HorizontalAlignment="Left" Margin="38,233,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Оборудование:" HorizontalAlignment="Left" Height="260" Margin="19,45,0,0" VerticalAlignment="Top" Width="281"/>
+        <DataGrid x:Name="equipmentGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="260" Margin="316,45,0,0" VerticalAlignment="Top" Width="466">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Характеристики" Binding="{Binding Path=Specifications}" Width="150" />
+                <DataGridHyperlinkColumn Header="Цена" Binding="{Binding Path=Price}" Width="80" />
+                <DataGridTextColumn Header="Брэнд" Binding="{Binding Path=BrandName}" Width="120" />
+                <DataGridTextColumn Header="Тип инструмента" Binding="{Binding Path=ToolTypeName}" Width="120" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

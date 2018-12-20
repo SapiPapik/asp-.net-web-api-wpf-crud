@@ -1,0 +1,19 @@
+﻿<Window x:Class="ProductCatalog.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductCatalog.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="100" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Оборудование" Command="{Binding EquipmentCommand}" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="92" Height="20"/>
+        <Button Content="Брэнды" HorizontalAlignment="Left" Margin="116,27,0,0" VerticalAlignment="Top" Width="92" Height="20"/>
+        <Button Content="Типы инструментов" HorizontalAlignment="Left" Margin="223,27,0,0" VerticalAlignment="Top" Width="92" Height="20"/>
+
+    </Grid>
+</Window>
